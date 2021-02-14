@@ -16,7 +16,8 @@ after_success:
   # Log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take these images and add to docker hub
-  - docker push swatikothari/multi-client
+  - docker push swatikot/multi-client
+  - docker push swatikot/multi-client:swatikothari/multi-client
   - docker push swatikothari/multi-nginx
   - docker push swatikothari/multi-server
   - docker push swatikothari/multi-worker
